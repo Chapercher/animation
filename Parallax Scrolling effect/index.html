@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scrolling parallax website</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="header">
+	<a href="#" class="logo">Chapercher's blog</a>
+	<ul>
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Destination</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</header>
+<section>
+	<h2 id="text"><span>C'est l'heure pour une nouvelle</span><br>Aventure</h2>
+	<img src="src/bird1.png" alt="pioupiou1" id="bird1">
+	<img src="src/bird2.png" alt="pioupiou2" id="bird2">
+	<img src="src/forest.png" alt="forest" id="forest">
+	<a href="page/icon_effect.html" id="btn">Explorez</a>
+	<img src="src/rocks.png" alt="rock" id="rock">
+	<img src="src/water.png" alt="rock" id="water">
+</section>
+<div class="sec">
+	<h2>Parallax Scrolling Effects</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat enim a erat dictum auctor. Curabitur dignissim ultrices augue scelerisque tempus sapien fermentum ac. Phasellus in lorem est. Etiam augue velit, porttitor lacinia cursus eu, ullamcorper eu est. Sed elit quam, viverra sed lacus sed, suscipit varius nulla. Nam rutrum enim tortor, in sodales tellus blandit id. Aliquam tempor felis enim, in rutrum lectus semper ac. In vehicula, orci ut varius pharetra, velit magna ornare nunc, nec luctus arcu massa at nunc. In laoreet mi dui, id consequat diam consectetur vitae. Pellentesque dignissim purus urna, sed consequat tellus sollicitudin sed.<br><br>Ut condimentum ligula ut massa vehicula, ut aliquet lectus cursus. Duis efficitur magna nulla, a feugiat nulla tempor et. Donec congue ex ex, at aliquam tellus ornare ac. Vivamus porta molestie augue id efficitur. Duis condimentum vestibulum metus, sed vulputate arcu ultrices ut. Duis volutpat enim mi, ac interdum arcu pharetra a. Vestibulum maximus, nibh consequat condimentum sollicitudin, felis orci viverra libero, in dapibus tellus nulla at felis. Proin non velit venenatis, tincidunt mi sed, lacinia lacus. Nullam egestas nunc id velit porta, in molestie enim ullamcorper. Vivamus consectetur eros eget est ultricies, ac rutrum dolor faucibus. Ut sollicitudin, nisl eget suscipit tincidunt, neque arcu vestibulum erat, et faucibus enim leo id nibh. Pellentesque vitae ullamcorper magna. Sed quis dictum odio.<br><br>Sed sodales augue augue, vel tempus lacus auctor vel. Phasellus eu ipsum sit amet sem elementum placerat quis in massa. Vivamus eu velit eu eros interdum molestie in id risus. Curabitur sed velit nibh. Praesent varius lacinia diam in rutrum. Mauris at vehicula arcu, et rhoncus metus. Suspendisse venenatis nisi sapien, id varius orci porttitor a. Mauris suscipit sed diam at congue. Etiam molestie ligula tellus. Mauris consequat porta blandit. Nulla non lorem non dolor tristique accumsan. Nunc aliquet velit imperdiet faucibus sollicitudin. Vivamus cursus sem a feugiat lacinia. Phasellus eu libero ut sapien finibus accumsan.<br><br>Praesent porttitor quam eu interdum ullamcorper. In mattis eros mi, sed elementum diam sollicitudin ac. Ut ac nunc in orci finibus consectetur. Fusce quis mattis dolor. Quisque vulputate mi vel tincidunt imperdiet. Suspendisse ac neque ex. Donec mattis eget justo at porta. Nunc id nunc vestibulum, imperdiet est eget, sodales eros. Curabitur diam lacus, malesuada varius libero id, facilisis dapibus nunc. Morbi consequat dolor nec orci condimentum maximus. In sed iaculis massa. Nunc et nisi sagittis, congue mi et, suscipit diam.<br><br>Morbi in faucibus mauris, convallis elementum erat. Phasellus sed orci nunc. Nunc ligula diam, mollis sed justo at, dignissim iaculis nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus venenatis, odio in imperdiet efficitur, velit ligula egestas sem, efficitur placerat dolor est quis justo. Sed sit amet fermentum ipsum. Integer imperdiet tortor et auctor tempor. Phasellus accumsan ante odio, ultrices laoreet orci consectetur porttitor. Nam tincidunt varius tortor, eget maximus eros euismod a. Cras nec quam non massa tristique luctus sed eget eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur idiculus mus.<br><br>Nullam bibendum sed elit in tempor. Donec orci elit, bibendum ac fermentum et, fringilla vel risus. Phasellus vehicula velit vel dolor egestas elementum. In consectetur malesuada urna, id maximus lorem tincidunt suscipit. Sed sed erat tincidunt, venenatis ex eu, vulputate lectus. Morbi vel ligula eget orci blandit malesuada ut maximus arcu. Etiam eu sapien sollicitudin, ultricies leo sit amet, interdum felis. Donec convallis facilisis lobortis. Curabitur mattis facilisis lacus, eu maximus nulla sollicitudin at. Nunc nibh quam, posuere sit amet ullamcorper a, eleifend vitae arcu.</p>
+</div>
+<script>
+	let text = document.getElementById('text');
+	let bird1 = document.getElementById('bird1');
+	let bird2 = document.getElementById('bird2');
+	let btn = document.getElementById('btn');
+	let rock = document.getElementById('rock');
+	let forest = document.getElementById('forest');
+	let water = document.getElementById('water');
+	let header = document.getElementById('header');
+
+	window.addEventListener('scroll', function (){
+		let value = window.scrollY;
+
+		text.style.top = 50 + value * -0.5 + '%';
+		bird1.style.top = value * -1.5 + 'px';
+		bird1.style.left = value * 2 + 'px';
+		bird2.style.top = value * -1.5 + 'px';
+		bird2.style.left = value * -5 + 'px';
+		btn.style.marginTop = value * 1.5 + 'px';
+		rock.style.top = value * -.12 + 'px';
+		forest.style.top = value * .25 + 'px';
+		header.style.top = value * .5 + 'px';
+	})
+</script>
+</body>
+</html>
