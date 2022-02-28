@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rancho&display=swap');
 
+
+/* NAV MENU QUAND IL N'Y A PAS DE li/ul */
 *{
 	margin: 0;
 	padding: 0;
@@ -7,8 +9,12 @@
 	font-family: 'Poppins', sans-serif;
 }
 body{
-	background: #fff;
+	background: rgb(63,94,251);
+	background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 	min-height: 100vh;
+}
+header{
+	border-bottom: solid grey 1px;
 }
 #header{
 	top: 0;
@@ -45,9 +51,10 @@ body{
 	background: #094b65;
 	color: #fff;
 }
+
+/* SECTION DES CARDS */
 section{
-	background: rgb(63,94,251);
-	background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+
 }
 h2{
 	text-transform: uppercase;
@@ -111,6 +118,12 @@ h2{
 }
 .item-img4{
 	background-image: url("../src/coffee.jpg");
+}
+.item-img5{
+	background-image: url("../src/clope.jpg");
+}
+.item-img6{
+	background-image: url("../src/cubisme.jpg");
 }
 
 /* NE PAS SUPPRIMER */
