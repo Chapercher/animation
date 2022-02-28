@@ -107,5 +107,13 @@ h2{
 	background-image: url("../src/background-effect.jpg");
 }
 .item-img3{
-	background-image: url("../src/icon-effect.jpg");
+	background-image: url("../src/calendar.jpg");
+}
+.item-img4{
+	background-image: url("../src/coffee.jpg");
+}
+
+/* NE PAS SUPPRIMER */
+.item-imgLast{
+	background-image: url("../src/coming_soon.jpg");
 }
