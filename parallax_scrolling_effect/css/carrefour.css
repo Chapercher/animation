@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rancho&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background: #fff;
+	min-height: 100vh;
+}
+#header{
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#header .logo{
+	color: #094b65;
+	font-weight: 700;
+	font-size: 2em;
+	text-decoration: none;
+}
+#header ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#header ul li{
+	list-style: none;
+	margin-left: 20px;
+}
+#header ul li a{
+	text-decoration: none;
+	padding: 6px 15px;
+	color: #094b65;
+	border-radius: 20px;
+}
+#header ul li a:hover,
+#header ul li a.active{
+	background: #094b65;
+	color: #fff;
+}
+section{
+	background: rgb(63,94,251);
+	background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+h2{
+	text-transform: uppercase;
+	text-align: center;
+}
+.card{
+	padding: 5% 0;
+}
+.cards{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 1em;
+	margin: 0 auto;
+	padding: 0 25px;
+	max-width: 1140px;
+}
+.card_item{
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .1);
+	border-radius: 5px;
+	background-color: #fff;
+}
+.item-description{
+	padding: 10px;
+}
+.item-link{
+	background: #25d366;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 20px;
+}
+.item-link:hover{
+	background: #fff;
+	color: #25d366;
+}
+
+
+
+/* IMAGE */
+.img{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	height: 240px;
+}
+
+.item-img1{
+	background-image: url("../src/icon-effect.jpg");
+}
+.item-img2{
+	background-image: url("../src/background-effect.jpg");
+}
+.item-img3{
+	background-image: url("../src/icon-effect.jpg");
+}
