@@ -1,24 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rancho&display=swap');
+
+
+/* HEADER  */
+
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
+body{
+	background: #111;
+	min-height: 100vh;
+	overflow: hidden;
+}
+#header{
+	top: 0;
+	left: 0;
+	/*width: 100%;*/
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#header .logo{
+	color: #094b65;
+	font-weight: 700;
+	font-size: 2em;
+	text-decoration: none;
+}
+.nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header-nav{
+	list-style: none;
+	margin-left: 20px;
+}
+.header-link{
+	text-decoration: none;
+	padding: 6px 15px;
+	color: #094b65;
+	border-radius: 20px;
+}
+.header-link:hover,
+.header-link.active{
+	background: #094b65;
+	color: #fff;
+}
+
 :root{
 	--bg: #222;
 }
-body{
+section{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	background: var(--bg);
 }
-ul{
+.icon{
 	position : relative;
 	display: flex;
 	gap: 50px;
 }
-ul li{
+.item-icon{
 	position: relative;
 	list-style: none;
 	width: 80px;
@@ -29,11 +76,11 @@ ul li{
 	cursor: pointer;
 	transition: 0.5s;
 }
-ul li:hover{
+.item-icon:hover{
 	z-index: 10000;
 	transform: scale(0.75);
 }
-ul li::before{
+.item-icon::before{
 	content: '';
 	position: absolute;
 	inset: 30px;
@@ -42,17 +89,17 @@ ul li::before{
 	0 0 0 22px var(--clr);
 	transition: 0.5s;
 }
-ul li:hover::before{
+.item-icon:hover::before{
 	inset: 0;
 }
-ul li::after{
+.item-icon::after{
 	content: '';
 	position: absolute;
 	inset: 0;
 	background: var(--bg);
 	transform: rotate(45deg);
 }
-ul li a{
+.item-icon a{
 	position : relative;
 	text-decoration: none;
 	color: var(--clr);
@@ -60,7 +107,7 @@ ul li a{
 	font-size: 2em;
 	transition: 0.5s;
 }
-ul li:hover a{
+.item-icon:hover a{
 	font-size: 3em;
 	filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
 }
