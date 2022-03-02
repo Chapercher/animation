@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rancho&display=swap');
+
+
+/* NAV MENU QUAND IL N'Y A PAS DE li/ul */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #222;
+    min-height: 100vh;
+    overflow: hidden;
+}
+#header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header .logo{
+    color: #094b65;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+#header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+#header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #094b65;
+    border-radius: 20px;
+}
+#header ul li a:hover,
+#header ul li a.active{
+    background: #094b65;
+    color: #fff;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .cigarette{
+    transform-style: preserve-3d;
+    animation: animate 15s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: perspective(1000px) rotateX(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateX(360deg);
+    }
+}
+.container .cigarette span{
+    position: absolute;
+    color: #fff;
+    font-size: 1.35em;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.76em;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    transform: translate(-50%, -50%) rotateX(calc(var(--i)
+    * 36deg)) translateZ(25px);
+    background: rgba(0,0,0,0.25);
+    transform-style: preserve-3d;
+}
+.container .cigarette span i{
+    font-style: normal;
+    color: #ec9535;
+}
+.container .cigarette span i:first-child:after{
+    content: 'L';
+    color: #ccc;
+    text-transform: lowercase;
+}
+.container .cigarette span i:last-child{
+    color: #f00;
+    filter: blur(2px);
+    text-shadow: -4px 0 2px #000,
+    8px 0 20px #f00,
+    8px 0 24px #f00,
+    8px 0 0 #222,
+    12px 0 #555,
+    16px 0 #666,
+    20px 0 #888,
+    24px 0 #999;
+}
